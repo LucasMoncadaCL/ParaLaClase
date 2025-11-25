@@ -10,11 +10,6 @@ def obtener_numero(prompt):
         except ValueError:
             print("Entrada inválida. Introduce un número.")
 
-def mostrar_resultado(res):
-    if isinstance(res, float) and res.is_integer():
-        print("Resultado:", int(res))
-    else:
-        print("Resultado:", res)
 
 # Operaciones básicas
 def suma(a, b): return a + b
@@ -29,6 +24,12 @@ def modulo(a, b):
     if b == 0:
         raise ZeroDivisionError("Módulo por cero")
     return a % b
+
+def mostrar_resultado(res):
+    if isinstance(res, float) and res.is_integer():
+        print("Resultado:", int(res))
+    else:
+        print("Resultado:", res)
 
 # Operaciones avanzadas
 def raiz_cuadrada(a):
